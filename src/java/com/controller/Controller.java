@@ -1,10 +1,11 @@
 package com.controller;
 
-import com.model.Departement;
 import com.dao.daoDepartementLocal;
 import com.dao.daoEmployeLocal;
+import com.model.Departement;
 import com.model.Employe;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -101,10 +102,6 @@ public class Controller extends HttpServlet {
     private void Departements(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         List<Departement> list = daoDept.findAll();
-        Departement dept = new Departement();
-        for(int i = 0 ; i<list.size() ; i++){
-            
-        }
         request.setAttribute("list", list);
         request.getRequestDispatcher("departements.jsp").forward(request, response);
     }

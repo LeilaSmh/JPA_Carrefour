@@ -68,13 +68,4 @@ public class daoEmploye implements daoEmployeLocal {
             deleteEmploye(list.get(i).getIdEmp());
         }
     }
-    
-    @Override
-    public int count (String refDept){
-        Query query = em.createNamedQuery("Employe.count");
-        query.setParameter("refDept", refDept);
-        int count = ((Number)query.getSingleResult()).intValue();
-        System.out.println(count);
-        return count;
-    }
 }

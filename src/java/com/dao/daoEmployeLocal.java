@@ -17,5 +17,4 @@ public interface daoEmployeLocal {
     public List<Employe> findAll();
     public List<Employe> EmpByDept(String refDept);
     public void DelByDept (String code);
-    public int count (String refDept);
 }
